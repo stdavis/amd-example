@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Simple AMD Example</title>
+    </head>
+    <body>
+        A
+        <input type="number" id='txtA'>
+
+        <br>
+
+        B
+        <input type="number" id='txtB'>
+
+        <br>
+
+        <button id="btnSum">Sum</button>
+
+        <br>
+
+        <span id="spanResult"></span>
+    </body>
+    <script type="text/javascript">
+        var a = document.getElementById('txtA');
+        var b = document.getElementById('txtB');
+        var btn = document.getElementById('btnSum');
+        var result = document.getElementById('spanResult');
+
+        btn.onclick = function () {
+            result.innerHTML = parseInt(a.value) + parseInt(b.value);
+        }
+    </script>
+</html>
