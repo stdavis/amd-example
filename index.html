@@ -1,6 +1,16 @@
 <html>
     <head>
         <title>Simple AMD Example</title>
+        <script>
+            var dojoConfig = {
+                baseUrl: './',
+                packages: [{
+                    name: 'app',
+                    location: 'app/'
+                }]
+            };
+        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.3/dojo/dojo.js"></script>
     </head>
     <body>
         A
@@ -20,13 +30,6 @@
         <span id="spanResult"></span>
     </body>
     <script type="text/javascript">
-        var a = document.getElementById('txtA');
-        var b = document.getElementById('txtB');
-        var btn = document.getElementById('btnSum');
-        var result = document.getElementById('spanResult');
-
-        btn.onclick = function () {
-            result.innerHTML = parseInt(a.value) + parseInt(b.value);
-        }
+        require(['app/App']);
     </script>
 </html>
